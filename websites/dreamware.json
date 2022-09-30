@@ -1,0 +1,18 @@
+[
+   {
+      "site": "Dreamware",
+      "container": ".products",
+      "item": ".product",
+      "name": ".product-box-name",
+      "price": ".product-price",
+      "image": ".product-image img",
+      "format": "?page={}",
+      "links" : [
+         {
+               "category":"Graphics Card",
+               "url":"https://www.dreamwaretech.co.za/c/computer-components/graphics-cards-gpus/nvidia-graphics-cards/",
+               "pages":3
+         }
+      ]
+   }
+]

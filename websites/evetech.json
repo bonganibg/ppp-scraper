@@ -1,0 +1,18 @@
+[
+    {
+    "site": "Evetech",
+    "container": ".product-row",
+    "item": ".product-block-grid .product-inner2",
+    "name": ".myProductName",
+    "price": ".price",
+    "image": ".image2 img",
+    "format": "",
+    "links" : [
+        {
+        "category":"Graphics Card",
+        "url":"https://www.evetech.co.za/components/nvidia-ati-graphics-cards-21.aspx",
+        "pages": 1
+        }
+    ]
+}
+]

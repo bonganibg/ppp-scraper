@@ -1,0 +1,50 @@
+[
+    {
+        "site": "Dreamware",
+        "container": ".products",
+        "item": ".product",
+        "name": ".product-box-name",
+        "price": ".product-price",
+        "image": ".product-image img",
+        "format": "?page={}",
+        "links" : [
+            {
+                "category":"Graphics Card",
+                "url":"https://www.dreamwaretech.co.za/c/computer-components/graphics-cards-gpus/nvidia-graphics-cards/",
+                "pages":3
+            }
+        ]
+    },
+    {
+        "site": "Evetech",
+        "container": ".product-row",
+        "item": ".product-block-grid .product-inner2",
+        "name": ".myProductName",
+        "price": ".price",
+        "image": ".image2 img",
+        "format": "",
+        "links" : [
+            {
+            "category":"Graphics Card",
+            "url":"https://www.evetech.co.za/components/nvidia-ati-graphics-cards-21.aspx",
+            "pages": 1
+            }
+        ]
+    },
+    {
+        "site": "Titan-Ice",
+        "container": ".grid-list",
+        "item": ".ty-column3",
+        "name": ".product-title",
+        "price": ".ty-list-price bdi",
+        "image": ".ty-grid-list__image img",
+        "format": "page-{}/",
+        "links" : [
+            {
+            "category":"Graphics Card",
+            "url":"https://www.titan-ice.co.za/hardware/gpus/",
+            "pages":16
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "site": "Titan-Ice",
+        "container": ".grid-list",
+        "item": ".ty-column3",
+        "name": ".product-title",
+        "price": ".ty-list-price bdi",
+        "image": ".ty-grid-list__image img",
+        "format": "page-{}/",
+        "links" : [
+            {
+            "category":"Graphics Card",
+            "url":"https://www.titan-ice.co.za/hardware/gpus/",
+            "pages":16
+            }
+        ]
+    }
+]
