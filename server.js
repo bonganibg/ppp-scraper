@@ -4,6 +4,9 @@ const scraper = require('./scraper');
 const test = require('./tester');
 
 const productRepo = require('./repositories/productRepo');
+const loggerRepo = require('./repositories/loggingRepo');
+
+const fs = require('fs');
 
 const app = express();
 
@@ -13,6 +16,15 @@ app.get('/scrape', async (req, res) => {
     const products = await scraper(fileName.toString());
     const response = productRepo(products);
     res.send(response);    
+});
+
+app.post('/logs', (req,res) => {
+    const fileName = './logs/logger.json';
+    const logs = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+
+    const response = loggerRepo(logs);
+
+    res.send(response);
 });
 
 const PORT = process.env.PORT || 8080;
