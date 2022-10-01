@@ -1,8 +1,6 @@
 const express = require('express');
 const scraper = require('./scraper');
 
-const test = require('./tester');
-
 const productRepo = require('./repositories/productRepo');
 const loggerRepo = require('./repositories/loggingRepo');
 
