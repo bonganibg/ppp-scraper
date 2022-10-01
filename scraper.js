@@ -80,11 +80,13 @@ const scraper = async(fileName) =>
 }
 
 const writeLogsToFile = (logs) => {
-    const fileName = './logs/logger.json';
-    const oldLogs = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
-    logs = logs.concat(oldLogs);
+    //const fileName = './logs/logger.json';
+    //const oldLogs = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+    //logs = logs.concat(oldLogs);
 
-    fs.writeFileSync(fileName, logs, 'utf-8');
+    //fs.writeFileSync(fileName, logs, 'utf-8');
+
+    console.log(logs)
 }
 
 const createErrorLogMessage = (message, error) => {
