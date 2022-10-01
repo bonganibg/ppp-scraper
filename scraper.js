@@ -73,6 +73,7 @@ const scraper = async(fileName) =>
             }
         }
         await browser.close();
+        console.log(`Done scraping ${website.site}`);
     }    
 
     writeLogsToFile(logger);
