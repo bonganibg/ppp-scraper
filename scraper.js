@@ -11,7 +11,7 @@ const scraper = async(fileName) =>
     for(const website of websiteComponents)
     {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             args: ['--no-sandbox']
         });
     
@@ -92,7 +92,7 @@ const createErrorLogMessage = (message, error) => {
         Type: "Error",
         Message: message,
         Class: "Scraper.js",
-        PrintedError: error.toString(),
+        PrintedError: error,
         OccuredOn: getDateTime()
     };
 
