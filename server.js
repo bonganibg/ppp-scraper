@@ -4,6 +4,8 @@ const scraper = require('./scraper');
 const productRepo = require('./repositories/productRepo');
 const loggerRepo = require('./repositories/loggingRepo');
 
+const rawData = require('./repositories/api/rawApi')
+
 const fs = require('fs');
 
 const app = express();
@@ -24,6 +26,8 @@ app.post('/logs', (req,res) => {
 
     res.send(response);
 });
+
+app.use('/api/raw', rawData);
 
 const PORT = process.env.PORT || 8080;
 

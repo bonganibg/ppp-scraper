@@ -11,7 +11,7 @@ const scraper = async(fileName) =>
     for(const website of websiteComponents)
     {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             args: ['--no-sandbox']
         });
     
