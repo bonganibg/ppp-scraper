@@ -5,7 +5,6 @@ const Product = require('../models/productModel');
 
 router.get('', (req, res) => {    
     Product.find()
-    .limit(10)
     .then((response) => {
         res.status(200).json({
             message: "Products retreived",
