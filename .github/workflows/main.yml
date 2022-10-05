@@ -2,7 +2,7 @@ name: PPP Scraper Scheduler
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "30 * * * *"
 
 jobs:
   cron:
@@ -10,7 +10,4 @@ jobs:
 
     steps:
       - name: Scrape Evetech
-        run: |
-          curl https://ppp-scraper.herokuapp.com/scrape?file=evetech,
-          curl https://ppp-scraper.herokuapp.com/scrape?file=dreamware,
-          curl https://ppp-scraper.herokuapp.com/scrape?file=titan-ice
+        run: curl https://ppp-scraper.herokuapp.com/scrape?file=all          
