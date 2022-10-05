@@ -8,6 +8,9 @@ const rawData = require('./repositories/api/rawApi')
 
 const fs = require('fs');
 
+const database = require('./repositories/database');
+database();
+
 const app = express();
 
 app.get('/scrape', async (req, res) => {

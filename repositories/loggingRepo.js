@@ -1,9 +1,6 @@
 const Logger = require('./models/loggingModel');
-const database = require('./database');
 
 const logger = (data) => {
-    database();
-
     data.forEach(log => {
         new Logger(log).save()
         .then(() => {
