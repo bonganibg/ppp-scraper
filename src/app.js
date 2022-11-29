@@ -5,9 +5,9 @@ const scraper = require('./services/scraper.service');
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
-//mongoose.connect(process.env.MONGO_DB)
-mongoose.connect("mongodb://localhost:27017/Price-Hunter-Holder-Test",{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGO_DB,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
     console.log("Database connected");
 
