@@ -1,40 +1,8 @@
-const express = require('express');
-const scraper = require('./scraper');
+const app = require('./src/app');
 
-const productRepo = require('./repositories/productRepo');
-const loggerRepo = require('./repositories/loggingRepo');
+const port = process.env.PORT || 8080;
 
-const rawData = require('./repositories/api/rawApi')
-
-const fs = require('fs');
-
-const database = require('./repositories/database');
-database();
-
-const app = express();
-
-app.get('/scrape', async (req, res) => {
-    const fileName = req.query.file == undefined ? 'all' : req.query.file;
-
-    const products = await scraper(fileName.toString());
-    const response = productRepo(products);
-    res.send(response);    
-});
-
-app.post('/logs', (req,res) => {
-    const fileName = './logs/logger.json';
-    const logs = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
-
-    const response = loggerRepo(logs);
-
-    res.send(response);
-});
-
-app.use('/api/raw', rawData);
-
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT, (err) => {
-    if (err) throw err;
-    console.log(`Listening on port ${PORT}`);
+app.set('port', port);
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 });
