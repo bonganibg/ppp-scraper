@@ -58,7 +58,8 @@ const scraper = async(fileName) =>
                                 Image: (await image).toString().trim(),
                                 Site: website.site,
                                 Category: currentCategory.category,
-                                AddedAt: getDateTime()
+                                LInk: "",
+                                Added: getDateTime()
                             };
                 
                             products.push(prodInfo);
