@@ -24,7 +24,7 @@ class Scraper {
 
     async launchPuppeteer(){
         return await puppeteer.launch({
-            headless: false,
+            headless: true,
             args: ['--no-sandbox']
         });
     }
